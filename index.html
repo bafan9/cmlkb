@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>tomyr</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/styles.css" rel="stylesheet">
+    <style>
+      
+	    body {
+            
+		    margin: 0;
+            
+			display: flex;
+            
+			justify-content: center;
+            
+			align-items: center;
+        
+		}
+
+            
+		#bgVideo {
+            
+		    position: fixed;
+            
+			right: 0;
+            
+			bottom: 0;
+            
+			min-width: 100%;
+            
+			min-height: 100%;
+            
+			width: auto;
+            
+			height: auto;
+            
+			z - index: -100;
+            
+			/* 自动播放 */
+            
+			autoplay: autoplay;
+            
+			/* 静音 */
+            
+			muted: muted;
+            
+			/* 循环播放 */
+            
+			loop: loop;
+        
+		}
+
+		#content {
+            
+		    position: relative;
+            
+			z - index: 1;
+            
+			color: white;
+            
+			text-align: center;
+        
+		}
+	</style>
+  </head>
+  <body>
+    <video id="bgVideo" poster="http://gsircc.test.upcdn.net/bjtp.jpg">
+          
+		<source src="http://gsircc.test.upcdn.net/beijing.mp4" type="video/mp4">
+          
+		  Your browser does not support the video tag.</source>
+    </video>
+	<div id="content">
+	  <h2>To my Dear:</h2>
+	  <h2>宝宝，新年快乐！过去一年，有你在身边，连平淡日常都变得闪闪发光。我可能会气你，让你心情低落，好在清晨充满爱的早餐，夜晚休闲的散步，课间的美好时光，试图看透对方的对视，或是琐碎又温暖的瞬间，都成为我最珍贵的回忆。新的一年，愿你被世界温柔宠溺，满心期许都能一一实现 。我会更加努力，使我爱你的方式更适合你，我还会一直陪着你。不管遇到什么，我都会紧紧牵着你的手，绝不松开。爱你不止新年，而是平凡的每一天。</h2>
+	<audio controls autoplay>
+        
+	  <source 
+	src="http://gsircc.test.upcdn.net/a.mp3" 
+	type="audio/mpeg">
+        
+		Your browser does not support the audio element.</source>
+    </audio>
+	<button id="playButton" onclick="playVideo()">播放视频</button>
+	<p>vivo浏览器可能无法使用按钮,若你已点,请点击刷新。</p>
+	</div>
+    <script>
+        
+	    function playVideo() {
+            
+	        const video = document.getElementById('bgVideo');
+            
+		    video.loop = true;
+            
+		    video.play();
+        
+		  }
+    
+    </script>
+    
+  </body>
+</html>		
